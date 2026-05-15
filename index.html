@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahman Tour Travels</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f5f5f5;
+}
+
+/* HEADER */
+
+header{
+background:#000;
+color:#fff;
+padding:20px;
+text-align:center;
+}
+
+header h1{
+font-size:34px;
+letter-spacing:2px;
+}
+
+header p{
+margin-top:5px;
+color:#ccc;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(to right,#111,#222);
+color:#fff;
+padding:60px 20px;
+text-align:center;
+}
+
+.hero h2{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#ccc;
+}
+
+/* BUTTON */
+
+.main-btn{
+display:inline-block;
+margin-top:20px;
+padding:15px 30px;
+background:#25D366;
+color:#fff;
+text-decoration:none;
+border-radius:10px;
+font-size:18px;
+}
+
+/* CARD */
+
+.card{
+background:#fff;
+margin:15px;
+padding:20px;
+border-radius:15px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.card h2{
+margin-bottom:15px;
+}
+
+/* FORM */
+
+input,select,textarea{
+width:100%;
+padding:14px;
+margin-top:10px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:16px;
+}
+
+button{
+width:100%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:10px;
+background:#000;
+color:#fff;
+font-size:18px;
+}
+
+/* CAR BOX */
+
+.car-box{
+background:#fafafa;
+padding:15px;
+border-radius:10px;
+margin-top:15px;
+border:1px solid #ddd;
+}
+
+.car-box img{
+width:100%;
+border-radius:10px;
+margin-top:10px;
+}
+
+/* REVIEW */
+
+.review{
+background:#fafafa;
+padding:15px;
+margin-top:10px;
+border-radius:10px;
+border-left:5px solid #25D366;
+}
+
+/* FLOAT BUTTON */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:15px;
+border-radius:50%;
+font-size:24px;
+text-decoration:none;
+}
+
+.call{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#007bff;
+color:#fff;
+padding:15px;
+border-radius:50%;
+font-size:24px;
+text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+background:#000;
+color:#fff;
+padding:20px;
+text-align:center;
+margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>RAHMAN TOUR TRAVELS</h1>
+<p>Safe • Trusted • Fast Cab Service</p>
+</header>
+
+<div class="hero">
+
+<h2>Book Your Ride Instantly 🚖</h2>
+
+<p>
+Local • Airport • Outstation • Tour Package
+</p>
+
+<a class="main-btn"
+href="https://wa.me/918892574765?text=Hello%20Rahman%20Tour%20Travels">
+Book On WhatsApp
+</a>
+
+</div>
+
+<!-- BOOKING -->
+
+<div class="card">
+
+<h2>Cab Booking</h2>
+
+<input type="text" id="name" placeholder="Your Name">
+
+<input type="number" id="phone" placeholder="Phone Number">
+
+<select id="pickup">
+<option>Pickup City</option>
+<option>Bangalore</option>
+<option>Mumbai</option>
+<option>Goa</option>
+<option>Chennai</option>
+<option>Hyderabad</option>
+<option>Pune</option>
+</select>
+
+<input type="text" id="drop" placeholder="Drop Location">
+
+<select id="car">
+
+<option>Select Car</option>
+
+<option>Swift Dzire AC</option>
+
+<option>Ertiga AC</option>
+
+<option>Innova AC</option>
+
+<option>Crysta AC</option>
+
+<option>Non AC Cab</option>
+
+</select>
+
+<input type="date" id="date">
+
+<textarea id="comment"
+placeholder="Comment / Budget / Timing"></textarea>
+
+<button onclick="bookNow()">
+Confirm Booking
+</button>
+
+</div>
+
+<!-- PAYMENT -->
+
+<div class="card">
+
+<h2>Advance Payment</h2>
+
+<p>
+Pay ₹500 advance for booking confirmation.
+</p>
+
+<img src="https://i.imgur.com/2DhmtJ4.png"
+style="width:100%;border-radius:10px;">
+
+<input type="text"
+id="utr"
+placeholder="Enter Payment UTR Number">
+
+<button onclick="verifyUTR()">
+Verify Payment
+</button>
+
+</div>
+
+<!-- CARS -->
+
+<div class="card">
+
+<h2>Our Cars</h2>
+
+<div class="car-box">
+<h3>Swift Dzire</h3>
+<p>AC Sedan • Comfortable Ride</p>
+
+<img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=1000">
+</div>
+
+<div class="car-box">
+<h3>Ertiga</h3>
+<p>Family SUV • AC</p>
+
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1000">
+</div>
+
+<div class="car-box">
+<h3>Innova Crysta</h3>
+<p>Premium Luxury SUV</p>
+
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1000">
+</div>
+
+</div>
+
+<!-- SERVICES -->
+
+<div class="card">
+
+<h2>Services</h2>
+
+....
+
+</div>
+
+<!-- YAHA TRUST WALA PASTE KAR -->
+
+<div class="card">
+
+<h2>Why Choose Us ?</h2>
+
+<p>✅ Trusted Cab Service</p>
+
+<p>✅ Professional Drivers</p>
+
+<p>✅ Safe & Comfortable Journey</p>
+
+<p>✅ 24/7 Customer Support</p>
+
+<p>✅ Clean & Well Maintained Cars</p>
+
+<p>✅ Affordable Price</p>
+
+<p>✅ On Time Pickup & Drop</p>
+
+<p>✅ All India Tour Available</p>
+
+</div>
+
+<!-- REVIEWS -->
+
+<div class="card">
+
+<h2>Customer Reviews ⭐</h2>
+
+<div class="review">
+⭐⭐⭐⭐⭐<br><br>
+Rahman bhai bohut acha driver hai.
+Safe driving & clean AC car.
+<br><br>
+- Rahul, Bangalore
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐<br><br>
+Goa trip mast tha.
+Very professional service.
+<br><br>
+- Amit, Mumbai
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐<br><br>
+Airport pickup on time.
+Highly recommended.
+<br><br>
+- Salman, Chennai
+</div>
+
+</div>
+
+<!-- CONTACT -->
+
+<div class="card">
+
+<h2>Contact</h2>
+
+<p>
+📞 8892574765
+</p>
+
+<p>
+💬 WhatsApp Booking Available
+</p>
+
+</div>
+
+<!-- FLOAT -->
+
+<a class="whatsapp"
+href="https://wa.me/918892574765">
+💬
+</a>
+
+<a class="call"
+href="tel:8892574765">
+📞
+</a>
+
+<script>
+
+let paymentVerified = false;
+
+function verifyUTR(){
+
+let utr =
+document.getElementById("utr").value;
+
+if(utr==""){
+
+alert("Enter UTR Number");
+
+return;
+
+}
+
+paymentVerified = true;
+
+alert("Payment Verified ✅");
+
+}
+
+function bookNow(){
+
+if(paymentVerified==false){
+
+alert("Please Verify Payment First");
+
+return;
+
+}
+
+let name =
+document.getElementById("name").value;
+
+let phone =
+document.getElementById("phone").value;
+
+let pickup =
+document.getElementById("pickup").value;
+
+let drop =
+document.getElementById("drop").value;
+
+let car =
+document.getElementById("car").value;
+
+let date =
+document.getElementById("date").value;
+
+let comment =
+document.getElementById("comment").value;
+
+let utr =
+document.getElementById("utr").value;
+
+let msg =
+"RAHMAN TOUR TRAVELS BOOKING 🚖\n\n";
+
+msg += "Name: " + name + "\n";
+
+msg += "Phone: " + phone + "\n";
+
+msg += "Pickup: " + pickup + "\n";
+
+msg += "Drop: " + drop + "\n";
+
+msg += "Car: " + car + "\n";
+
+msg += "Date: " + date + "\n";
+
+msg += "Comment: " + comment + "\n";
+
+msg += "UTR: " + utr + "\n";
+
+window.location.href =
+"https://wa.me/918892574765?text="
++ encodeURIComponent(msg);
+
+}
+
+</script>
+
+<footer>
+
+<p>© Rahman Tour Travels</p>
+
+<br>
+
+<p>
+🚀 Developed By 
+<a href="https://www.instagram.com/ntr___rebel_ntr_rebel?igsh=MWtvaTAxZXg2NnQ3cA==" 
+target="_blank"
+style="color:#25D366;text-decoration:none;">
+NTR REBEL
+</a>
+</p>
+
+</footer>
+
+</body>
+</html>
